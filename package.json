@@ -7,7 +7,9 @@
     "lint:js": "eslint .",
     "lint:css": "stylelint blocks/**/*.css styles/*.css",
     "lint": "npm run lint:js && npm run lint:css",
+    "lint:fix": "npx eslint blocks/**/*.js --fix",
     "prepare": "husky"
+    
   },
   "repository": {
     "type": "git",
