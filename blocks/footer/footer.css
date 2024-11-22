@@ -9,7 +9,7 @@ footer .footer > div {
   max-width: 1200px;
   display: flex;
   gap: 20px;
-  align-items: flex-end;
+  align-items: center;
 }
 
 footer .footer > div img{
