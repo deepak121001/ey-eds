@@ -1,5 +1,5 @@
 footer {
-  background-color: var(--dark-black-color);
+  background-color: var(--background-color-header);
   font-size: var(--body-font-size-xs);
   color: var(--light-color);
 }
@@ -11,6 +11,11 @@ footer .footer > div {
   display: flex;
   gap: 20px;
   align-items: flex-end;
+}
+
+footer .footer > div img{
+  width: 128px;
+  height: 66px;
 }
 
 footer .footer p {
