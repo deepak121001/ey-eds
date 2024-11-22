@@ -1,6 +1,8 @@
 footer {
   background-color: var(--light-color);
   font-size: var(--body-font-size-xs);
+  background: #202020;
+  color: var(--light-color);
 }
 
 footer .footer > div {
