@@ -1,6 +1,6 @@
 /* header and nav layout */
 header .nav-wrapper {
-  background-color: var(--background-color);
+  background-color: var(--background-color-header);
   width: 100%;
   z-index: 2;
   position: fixed;
@@ -155,6 +155,7 @@ header nav .nav-sections {
   flex: 1 1 auto;
   display: none;
   visibility: hidden;
+  color: white;
 }
 
 header nav[aria-expanded='true'] .nav-sections {
@@ -183,9 +184,10 @@ header nav .nav-sections ul > li > ul > li {
 
 @media (width >= 900px) {
   header nav .nav-sections {
-    display: block;
+    display: flex;
     visibility: visible;
     white-space: nowrap;
+    justify-content: center;
   }
 
   header nav[aria-expanded='true'] .nav-sections {

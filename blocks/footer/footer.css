@@ -1,20 +1,28 @@
 footer {
-  background-color: var(--light-color);
+  background-color: var(--background-color-header);
   font-size: var(--body-font-size-xs);
+  color: var(--light-color);
 }
 
 footer .footer > div {
   margin: auto;
   max-width: 1200px;
-  padding: 40px 24px 24px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+footer .footer > div img{
+  width: 128px;
+  height: 66px;
 }
 
 footer .footer p {
   margin: 0;
 }
 
-@media (width >= 900px) {
+/* @media (width >= 900px) {
   footer .footer > div {
     padding: 40px 32px 24px;
   }
-}
+} */
