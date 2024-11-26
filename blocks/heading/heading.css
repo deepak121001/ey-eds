@@ -1,0 +1,26 @@
+.heading {
+    margin: 20px 0;
+    
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      position: relative;
+      text-align: left;
+  
+      &::before {
+        content: ""; 
+        display: block;
+        width: 40px;
+        height: 20px;
+        background-color: yellow;
+        position: absolute; 
+        top: 50%; 
+        left: -60px;
+        transform: translate(0, -50%);
+      }
+    }
+  }
+  

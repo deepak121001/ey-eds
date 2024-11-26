@@ -16,6 +16,19 @@ const loadScript = (url, callback, type) => {
   return script;
 };
 
+const embedDocument = (url) => {
+  // Extract the file name, decode it, remove the extension, and trim extra spaces
+  const fileName = decodeURIComponent(url.pathname.split('/').pop())
+    .replace(/\.[^/.]+$/, '')
+    .trim();
+
+  return `<div style="text-align: center; padding: 10px;">
+    <a href="${url.href}" download="${fileName}" class="document-download-button" style="padding: 10px 15px; background-color: #0073e6; color: white; text-decoration: none; border-radius: 5px;">
+      Download ${fileName}
+    </a>
+  </div>`;
+};
+
 const getDefaultEmbed = (
   url,
 ) => `<div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;">
@@ -76,6 +89,10 @@ const loadEmbed = (block, link, autoplay) => {
     {
       match: ['twitter'],
       embed: embedTwitter,
+    },
+    {
+      match: ['.pdf', '.ppt'],
+      embed: embedDocument,
     },
   ];
 
