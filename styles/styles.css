@@ -11,9 +11,12 @@
  * governing permissions and limitations under the License.
  */
 
-:root {
+
+ :root {
     /* colors */
-    --color-yellow: #ffea00;
+    --color--dark-gray: #23232f;
+    --color-white: #ffffff;
+    --color-yellow: #fee700;
     --link-color: blue;
     --link-hover-color: blue;
     --background-color: #fff;
@@ -24,7 +27,8 @@
     --heading-highlight-color: #ffea00;
     --overlay-text-color: var(--text-color);
     --highlight-text-color: var(--text-color);
-    --background-color-header: #2e2e38;
+    --background-color-header: var(--color--dark-gray);
+    --header-text-color: #fff;
     --dark-black-color: #202020;
     --light-color: #bfbfbf;
 
@@ -58,8 +62,11 @@
     --heading-font-size-xs: 18px;
     --type-heading-m-lh: 30px;
 
-    /* nav height */
-    --nav-height: 115px;
+    /* nav */
+    --nav-height: 85px;
+    --logo-height: 55px;
+    --logo-width: 128px;
+    --nav-font-size: 14px;
 
     /* buttons */
     --button-background-color: white;
@@ -75,6 +82,9 @@
     --default-header-text-align: center;
 }
 
+html {
+    scroll-behavior: smooth;
+}
 body {
     font-size: var(--body-font-size-m);
     margin: 0;
@@ -90,7 +100,7 @@ body.appear {
 }
 
 header {
-    height: calc(var(--nav-height) + 25px);
+    height: calc(var(--nav-height));
 }
 
 main {
@@ -362,7 +372,7 @@ main input:hover {
 
 main .section {
     padding: 64px 16px;
-}
+  }
 
 main pre {
     background-color: var(--overlay-background-color);
@@ -394,11 +404,12 @@ img {
     height: auto;
 }
 
-@media (width >= 600px) {
+@media (min-width: 600px) {
     main .section {
-        padding: 64px 32px;
+      padding: 64px 32px;
     }
-}
+  }
+
 
 @media (width >= 900px) {
     :root {
