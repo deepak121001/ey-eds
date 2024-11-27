@@ -12,6 +12,7 @@
   margin: auto;
   position: relative;
   color: var(--color-white);
+  margin-top: 50px;
   
   p {
     margin: 0;
