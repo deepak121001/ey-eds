@@ -27,7 +27,8 @@
     --background-color-header: #2e2e38;
     --dark-black-color: #202020;
     --light-color: #bfbfbf;
-
+    --hover-background-color: #ededed;
+    --faded-heading-color: #7a7878
     /* fonts */
 
     /*  --body-font-family: 'Source Sans Pro', 'helvetica neue', helvetica, ubuntu, roboto, noto, sans-serif; */
