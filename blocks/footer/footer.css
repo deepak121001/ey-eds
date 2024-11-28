@@ -2,6 +2,8 @@ footer {
   background-color: var(--background-color-header);
   font-size: var(--body-font-size-xs);
   color: var(--light-color);
+  padding: 10px 0;
+  border-top: solid 1px #5a5a5a;
 }
 
 footer .footer > div {
@@ -10,6 +12,11 @@ footer .footer > div {
   display: flex;
   gap: 20px;
   align-items: center;
+  justify-content: space-between;
+
+  .default-content-wrapper {
+    text-align: right;
+  }
 }
 
 footer .footer > div img{
@@ -20,9 +27,3 @@ footer .footer > div img{
 footer .footer p {
   margin: 0;
 }
-
-/* @media (width >= 900px) {
-  footer .footer > div {
-    padding: 40px 32px 24px;
-  }
-} */
