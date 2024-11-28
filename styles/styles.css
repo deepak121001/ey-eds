@@ -32,13 +32,15 @@
     --dark-black-color: #202020;
     --light-color: #bfbfbf;
     --hover-background-color: #ededed;
-    --faded-heading-color: #7a7878
+    --faded-heading-color: #7a7878;
     /* fonts */
 
     /*  --body-font-family: 'Source Sans Pro', 'helvetica neue', helvetica, ubuntu, roboto, noto, sans-serif; */
+    
     --body-font-family: "Adobe Clean", adobe-clean, "Trebuchet MS", sans-serif;
     --heading-font-family: "Adobe Clean", adobe-clean, "Trebuchet MS",
         sans-serif;
+    
 
     /*  --heading-font-family: asar, georgia, 'Times New Roman', times, serif; */
     --fixed-font-family: "Roboto Mono", menlo, consolas, "Liberation Mono",
