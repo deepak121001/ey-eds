@@ -311,3 +311,7 @@ header nav .nav-brand .default-content-wrapper {
     --logo-height: 35px;
     --logo-width: 34px;
 }
+
+.nav-sections a.active {
+  color: var(--color-yellow);
+}
