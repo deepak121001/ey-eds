@@ -194,3 +194,55 @@ function handleScroll() {
 }
 
 window.addEventListener('scroll', debounce(handleScroll, 0));
+
+const handleIntersect = (entries) => {
+  const navArray = [
+    {
+      navid: 'why-consider-ey',
+      sections: [
+        {
+          id: 'why-consider-ey',
+        },
+        {
+          id: 'our-values',
+        },
+        {
+          id: 'value-beyond-audit',
+        },
+      ],
+    },
+    {
+      navid: 'built-on-technology-our-audit-is-designed-to-deliver',
+      sections: [
+        {
+          id: 'built-on-technology-our-audit-is-designed-to-deliver',
+        },
+        {
+          id: 'ey-digital-audit-1',
+        },
+      ],
+    },
+  ];
+  entries.forEach((entry) => {
+    const sectionId = entry.target.querySelector('div h2')?.getAttribute('id');
+    const navLinks = document.querySelectorAll('.nav-sections a');
+    if (entry.isIntersecting) {
+      navLinks.forEach((link) => {
+        link.classList.remove('active');
+        const sections = navArray?.find((x) => x.navid === link.getAttribute('href').substring(1))?.sections;
+        const isLinkExist = sections?.some((el) => el.id === sectionId);
+        if (isLinkExist) link.classList.add('active');
+      });
+    }
+  });
+};
+
+const createObserver = () => {
+  const observer = new IntersectionObserver(handleIntersect);
+  const sections = document.querySelectorAll('main > .section');
+  sections.forEach((section) => {
+    observer.observe(section);
+  });
+};
+
+window.addEventListener('DOMContentLoaded', createObserver());
