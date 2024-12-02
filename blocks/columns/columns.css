@@ -15,17 +15,22 @@
   order: 1;
 }
 
+.columns >div > div > ul > li{
+  font-size: var(--type-body-s-size);;
+}
+
 .columns > div > .columns-img-col {
   order: 0;
 }
 
 .columns > div > .columns-img-col img {
   display: block;
+  padding-top: 35px;
 }
 
 @media (width >= 900px) {
   .columns > div {
-    align-items: center;
+    align-items: flex-start;
     flex-direction: unset;
     gap: 24px;
   }

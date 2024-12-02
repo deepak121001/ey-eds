@@ -255,7 +255,7 @@ header nav .nav-sections ul > li > ul > li {
         > ul {
         display: block;
         position: absolute;
-        left: -24px;
+        left: 48px;
         width: 200px;
         top: 150%;
         padding: 16px;
